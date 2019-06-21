@@ -1,6 +1,6 @@
 /**
  * Created by laoya on 16/5/20.
- * 乐哈复制添加版权模块
+ * 复制添加版权模块
  */
 
 $(function(){
