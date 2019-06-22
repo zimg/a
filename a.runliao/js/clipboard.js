@@ -8,7 +8,7 @@ $(function(){
   var copyRightStr = '<br><br>';
   copyRightStr += '作者:'+author;
   copyRightStr += ('<br>来源链接:' + window.location.href + '<br>');
-  copyRightStr += '来源:乐哈网<br>';
+  copyRightStr += '来源:润疗养生网<br>';
   copyRightStr += '著作权归作者所有。';
 
   $('body').on('copy', function(ev){
