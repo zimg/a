@@ -205,7 +205,7 @@ var $libs = {
             }
             var url_hash = window.location.hash;
             if (!url_hash.match("fromapp")) {
-                alert([this.browser.is_ios_android,this.browser.u]);
+                //  alert([this.browser.is_ios_android,this.browser.u]);
                 if (this.browser.is_ios_android) {
                     window.location.replace(mobile_url);
                 }
