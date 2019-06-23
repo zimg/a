@@ -40,6 +40,7 @@
 .table_a li p{padding-top:1.2rem;line-height:1;font-size:1.2rem}
 .table_a li .face{width:2.5rem;height:2.5rem;border-radius:100rem;margin-right:.5rem}
 .table_a li p span.fr{margin-top:-.5rem}
+
 .morebar{width:100%;padding:.8rem 0;text-align:center}
 .morebar.bg_f5{padding:0}
 .morebar a{display:inline-block;}
@@ -357,7 +358,7 @@ display: block;
     height: 1.3rem;
     padding-top: 1.6rem;
     padding-right: 0.1rem;
-    background: url(../images/eye.png) 0px 3px no-repeat;
+    background: url(../images/eye.png) 0 3px no-repeat;
     background-size: 1.5rem;    
 }
 .num{
@@ -385,7 +386,7 @@ width: 100%;
     height: 2.2rem;
     line-height: 2.2rem;
     text-align: center;
-    background: url(../images/tag.png) 0px 4px no-repeat;
+    background: url(../images/tag.png) 0 4px no-repeat;
     background-size: 1.6rem;
     }
 .baby li {
