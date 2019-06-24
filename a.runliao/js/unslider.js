@@ -132,4 +132,4 @@
             s.data("unslider" + (r > 1 ? "-" + (i + 1) : ""), u)
         })
     }
-})(window.jQuery, false) 
+})(window.jQuery, false);

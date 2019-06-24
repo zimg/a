@@ -107,14 +107,35 @@ var $url = {
         }
         return rs;
     },
-    favorite: function (sTitle, sURL) {
-        try {
-            window.external.addFavorite(sURL, sTitle);
-        } catch (e) {
+    favorite:function(title,url){
+        if(!title){
+            title = document.title;
+        }
+        if(!url){
+            url = window.location.href;
+        }
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("360se") > -1) {
+            alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+        } else if (ua.indexOf("msie 8") > -1) {
             try {
-                window.sidebar.addPanel(sTitle, sURL, "");
+                window.external.AddToFavoritesBar(url, title); //IE8
             } catch (e) {
-                alert("加入收藏失败，请使用Ctrl+D进行添加");
+                alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+            }
+        } else {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    try {
+                        window.external.AddToFavoritesBar(sURL, sTitle); //IE8
+                    } catch (e) {
+                        alert("加入收藏失败，请使用Ctrl+D进行添加");
+                    }
+                }
             }
         }
     }
@@ -214,9 +235,14 @@ var $libs = {
     },
     // adwrite
     aw: function (mode, size) {
-        var str = 'mode:' + mode + (size ? ' size:' + size : '');
+        var str = 'name:' + mode + (size ? ' size:' + size : '');
         if ($__m_g_com && $__m_g_com[mode]) {
             str = $__m_g_com[mode];
+        }else{
+            var wh = size.split('*');
+            var w  = wh[0];
+            var h  = wh[1];
+            str = '<div style="width:'+w+'px;height:'+h+'px;overflow:hidden;margin:auto;border:1px #f60 dashed;padding:20px 10px;text-align:center;">'+str+'</div>'
         }
         document.write(str);
     },
@@ -341,8 +367,7 @@ var $libs = {
         if (typeof this.qrcode != "undefined" && this.qrcode) {
             try {
                 this.qrcode({width: 120, height: 120});
-            } catch (e) {
-            }
+            } catch (e) {}
         }
     }
 };

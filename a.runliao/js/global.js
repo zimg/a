@@ -31,6 +31,8 @@ $(function () {
       }
     })
   });
+
+
   navTriggerEl.on('mouseleave', function (ev) {
     //console.log(ev.pageY, $(ev.target).offset().top, $(ev.target).outerHeight());
     if (ev.pageY >= $(ev.target).offset().top + $(ev.target).outerHeight()) return false;
@@ -43,7 +45,7 @@ $(function () {
   });
 
 
-  //喜欢点击提交
+  // 喜欢点击提交
   window.loveSubmit = {
     createNew: function () {
       var loveSubmit = {};
@@ -85,21 +87,23 @@ $(function () {
         });
       };
       /**
-       *  ajax请求并回显
-       * @param  object   c    绑定事件的jquery对象
-       * @param  object   s    回显的jquery对象
-       * @param  integer   id    文档id
+       * ajax请求并回显
+       * @param    c     绑定事件的jquery对象
+       * @param    s     回显的jquery对象
+       * @param    id    文档id
        * @return   void
        */
       loveSubmit.show = function (c, s, id) {
-        var url = '/ha.php?s=/Home/Home/setLove/id/' + id + '.html';
-        c.click(function () {
-          $.get(url, function (data) {
-            var d = data.info;
-            //alert(d);alert(isNaN(d));
-            !isNaN(d) ? s.html(d) : alert(d);
+        if($sc && $sc.url_api){
+          var url =  $sc.url_api + 'love.html?id=' + id + '&_='+Math.random();
+          c.click(function () {
+            $.get(url, function (data) {
+              var d = data.info;
+              //alert(d);alert(isNaN(d));
+              !isNaN(d) ? s.html(d) : alert(d);
+            });
           });
-        });
+        }
       };
 
       return loveSubmit;
@@ -126,34 +130,6 @@ $(function () {
     triggerEl.trigger('click');
   }
 
-  window.setTimeout(function () {
-    var moreBtnEl = $('.share .bds_more');
-    var tipPopEl = $('<span class="xiaomi-btn">分享赢得小米手环</span>');
-    var overlayEl = $('.j-xiaomi-overlay');
-    var shareScrollEl = $('.j-share-scroll');
-    if (!overlayEl.length) return;
-    return;
-    tipPopEl.css({
-      top: moreBtnEl.offset().top - 38,
-      left: moreBtnEl.offset().left - 60
-    });
-    tipPopEl.appendTo('body');
-    tipPopEl.on('click', function () {
-      overlayEl.css('top', moreBtnEl.offset().top - 60).fadeIn(100);
-    });
-    overlayEl.on('click', '.j-close', function (ev) {
-      ev.preventDefault();
-      overlayEl.fadeOut(100);
-    });
-
-    (function () {
-      var shareItemEl = shareScrollEl.children().first();
-      shareItemEl.css('display', 'none');
-      shareScrollEl.prepend(shareItemEl);
-      shareItemEl.slideDown();
-      window.setTimeout(arguments.callee, 3000);
-    })();
-  }, 1000);
 
   // 浮层登录
   var $loginTri = $('.j-login');
@@ -170,38 +146,6 @@ $(function () {
     $loginOverlay.hide();
   });
 
-  // 侧栏fixed广告
-  var $fixedAdEl = $('.j-fixed-ad');
-  window.setTimeout(function(){
-    if($fixedAdEl.length){
-      var adElHeight = $fixedAdEl.outerHeight();
-      var startPos = $fixedAdEl.offset().top;
-      var ie6 = !-[1,]&&!window.XMLHttpRequest;
-
-      function windowScrollHandler(ev){
-        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        if(scrollTop > startPos + 20){
-          if(ie6){
-            $fixedAdEl.css({
-              'position': 'absolute',
-              'top': scrollTop + 20
-            });
-          }else{
-            $fixedAdEl.css({
-              'position': 'fixed',
-              'top': 20
-            });
-          }
-        }else{
-          $fixedAdEl.css({
-            'position': 'static'
-          });
-        }
-      }
-
-      $(window).on('scroll', windowScrollHandler).trigger('scroll');
-    }
-  }, 1000);
 
   
   // img lazyload
@@ -271,11 +215,4 @@ $(function () {
   $(window).on('scroll', windowScrollHandler).trigger('scroll');
 });
 
-var canup = function () {
-  var q = document.getElementById('q').value;
-  if (q) {
-    document.getElementById('up').style.display = 'block';
-  } else {
-    document.getElementById('up').style.display = 'none';
-  }
-}; 
+
