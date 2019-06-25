@@ -70,9 +70,6 @@ h2 {
 .news-list .news-item .like a:hover {
   background-position: -40px 0;
 }
-.banner {
-  line-height: 0;
-}
 /* override margin */
 .col-left {
   margin-top: 12px;

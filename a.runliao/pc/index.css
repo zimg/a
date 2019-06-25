@@ -5,7 +5,7 @@
   float: left;
 }
 .header {
-  margin-bottom: 45px;
+  margin-bottom: 10px;
 }
 .cata {
   height: 255px;
@@ -42,12 +42,31 @@
   color: #009977;
 }
 .cata ul li h4 {
+  font-weight: bold;
   background: url(../img/index-icon-1.png) no-repeat;
   padding-left: 37px;
   height: 30px;
   float: left;
   margin: 0;
   width: 35px;
+}
+.cata ul li .s-1 h4 {
+  background-position: 0 -34px;
+}
+.cata ul li .s-2 h4 {
+  background-position: 0 -135px;
+}
+.cata ul li .s-3 h4 {
+  background-position: 0 -70px;
+}
+.cata ul li .s-4 h4 {
+  background-position: 0 0;
+}
+.cata ul li .s-5 h4 {
+  background-position: 0 -102px;
+}
+.cata ul li .s-6 h4 {
+  background-position: 0 -173px;
 }
 .cata ul li .sub-cata {
   display: none;
@@ -70,33 +89,12 @@
   float: none;
   white-space: nowrap;
 }
-.cata ul li .sub-cata a.last {
+.cata ul li .sub-cata a .last {
   border-bottom: none;
 }
 .cata ul li .sub-cata a:hover {
   background: #f4f3f2;
   color: #009977;
-}
-.cata ul li h4 {
-  font-weight: bold;
-}
-.cata ul li.s-1 h4 {
-  background-position: 0 -34px;
-}
-.cata ul li.s-2 h4 {
-  background-position: 0 -135px;
-}
-.cata ul li.s-3 h4 {
-  background-position: 0 -70px;
-}
-.cata ul li.s-4 h4 {
-  background-position: 0 0;
-}
-.cata ul li.s-5 h4 {
-  background-position: 0 -102px;
-}
-.cata ul li.s-6 h4 {
-  background-position: 0 -173px;
 }
 .slide {
   float: left;
@@ -186,7 +184,7 @@
   margin: 0 5px;
   text-indent: -9999px;
 }
-.slide .dots li.active {
+.slide .dots li .active {
   background: #fff;
 }
 .hot {
@@ -244,20 +242,14 @@
   top: 50%;
   margin-top: -1px;
 }
-.hot .text-list li.head {
+.hot .text-list li .head {
   position: static;
   padding-left: 0;
 }
-.hot .text-list li.head blockquote {
+.hot .text-list li .head blockquote {
   display: block;
   margin: 3px 0;
   font-size: 12px;
-}
-.banner {
-  line-height: 0;
-  margin-top: 20px;
-  padding: 0 10px;
-  clear: both;
 }
 .life {
   margin-top: 20px;
@@ -283,7 +275,7 @@
 .life .links a {
   color: #666;
 }
-.left .links a:hover {
+.life .links a:hover {
   color: #009977;
 }
 .life .media-list {
@@ -301,7 +293,6 @@
   margin-bottom: 30px;
   display: inline;
   overflow: hidden;
-  height: 168px;
 }
 .life .media-list li .object {
   float: left;
@@ -341,10 +332,9 @@
   text-overflow: ellipsis;
   margin-left: 0;
   padding-left: 10px;
-  width: 100%;
   height: auto;
 }
-.life .media-list li .text-list li:before {
+.life .media-list li:before {
   content: " ";
   width: 2px;
   height: 2px;
@@ -365,6 +355,11 @@
 }
 .eat {
   margin-top: 20px;
+}
+.eat ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .eat h2 {
   font-size: 14px;
@@ -388,11 +383,6 @@
 }
 .eat .links a:hover {
   color: #009977;
-}
-.eat ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .eat .media-list {
   margin-left: -20px;
@@ -464,11 +454,6 @@
   margin-bottom: 20px;
   display: inline;
 }
-.feet .media-list li .object {
-  float: left;
-  margin-right: 10px;
-  line-height: 0;
-}
 .feet .media-list li blockquote {
   margin: 5px 0;
   font-size: 12px;
@@ -478,10 +463,15 @@
   color: #999;
   font-size: 12px;
 }
-.feet ul {
+.feet .media-list li ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.feet .media-list li .object {
+  float: left;
+  margin-right: 10px;
+  line-height: 0;
 }
 .feet .text-list {
   float: left;
@@ -498,7 +488,7 @@
 .feet .text-list li a:hover {
   color: #009977;
 }
-.feet .text-list li:before {
+.feet .text-list li a:before {
   content: " ";
   width: 2px;
   height: 2px;
@@ -508,11 +498,11 @@
   top: 50%;
   margin-top: -1px;
 }
-.feet .text-list li.head {
+.feet .text-list li .head {
   position: static;
   padding-left: 0;
 }
-.feet .text-list li.head blockquote {
+.feet .text-list li .head blockquote {
   display: block;
   font-size: 12px;
   margin: 5px 0;
@@ -535,6 +525,11 @@
   padding-left: 5px;
   margin-bottom: 18px;
 }
+.bbs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .bbs .links {
   font-size: 12px;
   text-align: right;
@@ -549,15 +544,6 @@
 .bbs .links a:hover {
   color: #009977;
 }
-.bbs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.question .show {
-  height: 400px;
-  overflow: hidden;
-}
 .bbs .question {
   font-size: 12px;
   width: 360px;
@@ -571,25 +557,54 @@
   height: 28px;
   line-height: 28px;
 }
-.orange,
-.orange:hover,
-.orange:visited,
-.orange:active {
-  color: #f60;
-}
-.gray9,
-.gray9:hover,
-.gray9:visited,
-.gray9:active {
-  color: #999;
+.bbs .question li b {
+  display: block;
+  float: right;
+  font-weight: normal;
 }
 .bbs .question li img {
   float: left;
-  margin-right: 5px;
   width: 28px;
   height: 28px;
   border-radius: 100px;
   margin-right: 10px;
+}
+.bbs .question li em {
+  display: block;
+  float: right;
+  font-style: normal;
+  color: #999;
+  margin-right: 15px;
+}
+.bbs .question li p .q {
+  margin: 3px 0;
+}
+.bbs .question li:after {
+  position: absolute;
+  content: " ";
+  width: 1px;
+  height: 100%;
+  background: #e5e5e5;
+  top: 5px;
+  left: 3px;
+  z-index: 1;
+}
+.bbs .question li:before {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  content: " ";
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+  background: #ccc;
+  z-index: 2;
+}
+.bbs .question li .first:before {
+  background: #1bbc9b;
+}
+.bbs .question li .last:after {
+  display: none;
 }
 .bbs .question li .ilabel {
   display: block;
@@ -608,48 +623,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.bbs .question li b {
-  display: block;
-  float: right;
-  font-weight: normal;
+.bbs .question .show {
+  height: 400px;
+  overflow: hidden;
 }
-.bbs .question li em {
-  display: block;
-  float: right;
-  font-style: normal;
-  color: #999;
-  margin-right: 15px;
-}
-.bbs .question li p.q {
-  margin: 3px 0;
-}
-/*.bbs .question li:after{
-	position: absolute;
-	content: " ";
-	width: 1px;
-	height: 100%;
-	background: #e5e5e5;
-	top: 5px;
-	left: 3px;
-	z-index: 1;
-}
-.bbs .question li:before{
-	position: absolute;
-	top: 5px;
-	left: 0px;
-	content: " ";
-	width: 7px;
-	height: 7px;
-	border-radius: 3px;
-	background: #ccc;
-	z-index: 2;
-}
-.bbs .question li.first:before{
-	background: #1bbc9b;
-}
-.bbs .question li.last:after{
-	display: none;
-}*/
 .bbs .weibo {
   float: left;
   width: 370px;
@@ -680,15 +657,15 @@
   top: 50%;
   margin-top: -1px;
 }
-.bbs .weibo ul li.head {
+.bbs .weibo ul li .head {
   padding-left: 0;
   line-height: 0;
   height: 150px;
 }
-.bbs .weibo ul li.head:before {
+.bbs .weibo ul li .head:before {
   display: none;
 }
-.bbs .weibo ul li.head span {
+.bbs .weibo ul li .head span {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -698,6 +675,18 @@
   height: 2em;
   line-height: 2;
   text-indent: 10px;
+}
+.orange,
+.orange:hover,
+.orange:visited,
+.orange:active {
+  color: #f60;
+}
+.gray9,
+.gray9:hover,
+.gray9:visited,
+.gray9:active {
+  color: #999;
 }
 .views {
   margin-top: 30px;
@@ -722,26 +711,12 @@
   font-size: 12px;
   font-weight: bold;
 }
-.views .view .object {
-  float: left;
-  margin-right: 10px;
-  line-height: 0;
-}
 .views .view p {
   margin: 3px 0 0;
 }
 .views .view p cite {
   font-style: normal;
   color: #999;
-}
-.views .view p .like {
-  display: inline-block;
-  padding-left: 20px;
-  background: url(../img/index-icon-3.png) no-repeat 0 3px;
-}
-.views .view p .like:hover,
-.views .view p .liked {
-  background-position: 0 -13px;
 }
 .views .view p em {
   color: #fff;
@@ -773,10 +748,24 @@
 .views .view p .sns .weixin {
   background-position: 0 -92px;
 }
-.views .hover {
+.views .view p .like {
+  display: inline-block;
+  padding-left: 20px;
+  background: url(../img/index-icon-3.png) no-repeat 0 3px;
+}
+.views .view p .like:hover,
+.views .view p .liked {
+  background-position: 0 -13px;
+}
+.views .view .object {
+  float: left;
+  margin-right: 10px;
+  line-height: 0;
+}
+.views .view .hover {
   background: #F1F3E1;
 }
-.views .hover p .sns {
+.views .view .hover p .sns {
   visibility: visible;
 }
 .date h2 {
@@ -795,7 +784,7 @@
 .date .canla p {
   margin: 0 0 2px 0;
 }
-.date .canla p img {
+.date .canla img {
   width: 315px;
 }
 .date .weather {
@@ -838,16 +827,16 @@
   background: url(../img/index-icon-4.png) no-repeat;
   margin-bottom: 5px;
 }
-.date .tabs-list li.i-1 i {
+.date .tabs-list li .i-1 i {
   background-position: 0 0;
 }
-.date .tabs-list li.i-2 i {
+.date .tabs-list li .i-2 i {
   background-position: 0 -71px;
 }
-.date .tabs-list li.i-3 i {
+.date .tabs-list li .i-3 i {
   background-position: 0 -144px;
 }
-.date .tabs-list li.i-4 i {
+.date .tabs-list li .i-4 i {
   background-position: 0 -214px;
 }
 .date .text-list {
@@ -921,28 +910,28 @@
   height: 64px;
   background: url(../img/index-icon-5.png) no-repeat;
 }
-.tools .tools-list a.t-1 i {
+.tools .tools-list a .t-1 i {
   background-position: 0 0;
 }
-.tools .tools-list a.t-2 i {
+.tools .tools-list a .t-2 i {
   background-position: 0 -71px;
 }
-.tools .tools-list a.t-3 i {
+.tools .tools-list a .t-3 i {
   background-position: 0 -143px;
 }
-.tools .tools-list a.t-4 i {
+.tools .tools-list a .t-4 i {
   background-position: 0 -214px;
 }
-.tools .tools-list a.t-5 i {
+.tools .tools-list a .t-5 i {
   background-position: 0 -286px;
 }
-.tools .tools-list a.t-6 i {
+.tools .tools-list a .t-6 i {
   background-position: 0 -357px;
 }
-.tools .tools-list a.t-7 i {
+.tools .tools-list a .t-7 i {
   background-position: 0 -429px;
 }
-.tools .tools-list a.t-8 i {
+.tools .tools-list a .t-8 i {
   background-position: 0 -500px;
 }
 .daren {
@@ -970,7 +959,7 @@
   line-height: 20px;
   border-bottom: #e5e5e5 solid 1px;
 }
-.daren .daren-list li.last {
+.daren .daren-list li .last {
   border-bottom: none;
 }
 .daren .daren-list li .head {

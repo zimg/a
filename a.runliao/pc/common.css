@@ -134,12 +134,35 @@ a:visited {
   color: #009977;
   text-decoration: underline;
 }
+.header .top-pub-btn span {
+  position: relative;
+}
+.header .top-pub-btn span img {
+  position: absolute;
+  right: -26px;
+  top: 2px;
+}
+.header .top-pub-btn span .new {
+  display: inline-block;
+  height: 10px;
+  width: 30px;
+  text-align: center;
+  line-height: 10px;
+  color: #F00;
+  font-size: 14px;
+  font-family: Geneva, Verdana, sans-serif;
+  position: absolute;
+  right: -30px;
+  top: 2px;
+}
 .container {
   width: 100%;
 }
 .container .row {
-  width: 1100px;
+  width: 1130px;
   margin: 0 auto;
+  padding: 0 15px;
+  background-color: #FFFFFF;
 }
 .container .row .col-left {
   float: left;
@@ -328,6 +351,11 @@ form .form-control input {
   overflow: hidden;
   display: block;
 }
+.banner {
+  line-height: 0;
+  margin: 20px auto 0;
+  clear: both;
+}
 .header {
   width: 100%;
   height: 46px;
@@ -474,13 +502,13 @@ form .form-control input {
   margin: 10px 0 0 10px;
 }
 .foot {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .foot .links {
   text-align: center;
-  border-bottom: #ececec solid 1px;
+  border: #ececec solid 0;
   line-height: 30px;
-  width: 1100px;
+  width: 1130px;
   margin: 0 auto;
 }
 .foot .links a {
@@ -597,7 +625,7 @@ form .form-control input {
   margin: 0 5px;
   text-indent: -9999px;
 }
-.slide .dots li.active {
+.slide .dots li .active {
   background: #fff;
 }
 .pager {
@@ -614,7 +642,7 @@ form .form-control input {
   margin-left: 5px;
 }
 .pager a:hover,
-.pager a.cur {
+.pager a .cur {
   background: #1bbc9b;
   color: #fff;
   border-color: #1bbc9b;
@@ -628,7 +656,7 @@ form .form-control input {
   padding: 5px 7px;
   margin-left: 5px;
 }
-.pager span.current {
+.pager span .current {
   background: #1bbc9b;
   color: #fff;
   border-color: #1bbc9b;
@@ -668,6 +696,18 @@ form .form-control input {
   height: 100px;
   resize: none;
 }
+.comment-plugin .comment-box .text button {
+  background: #1bbc9b;
+  color: #fff;
+  border: #1bbc9b solid 1px;
+  width: 50px;
+}
+.comment-plugin .comment-box .text button:disabled,
+.comment-plugin .comment-box .text button .disabled {
+  background: #f9f9f9;
+  border: #e5e5e5 solid 1px;
+  color: #999;
+}
 .comment-plugin .comment-box .text .acle {
   position: absolute;
   width: 7px;
@@ -689,18 +729,6 @@ form .form-control input {
   margin-right: 10px;
   color: #999;
   font-size: 12px;
-}
-.comment-plugin .comment-box .text button {
-  background: #1bbc9b;
-  color: #fff;
-  border: #1bbc9b solid 1px;
-  width: 50px;
-}
-.comment-plugin .comment-box .text button:disabled,
-.comment-plugin .comment-box .text button.disabled {
-  background: #f9f9f9;
-  border: #e5e5e5 solid 1px;
-  color: #999;
 }
 .comment-plugin .comment-list {
   margin-top: 20px;
@@ -919,6 +947,23 @@ form .form-control input {
   display: none;
   z-index: 10000;
 }
+.xiaomi-overlay h3 {
+  color: #1bbc9b;
+  border-left: #1bbc9b solid 5px;
+  padding-left: 10px;
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  text-align: left;
+}
+.xiaomi-overlay a.close {
+  width: 15px;
+  height: 15px;
+  background: url(../img/close-btn.png) no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 .xiaomi-overlay .input-item {
   margin-bottom: 10px;
   padding-left: 75px;
@@ -941,15 +986,6 @@ form .form-control input {
   border: none;
   border-radius: 4px;
   padding: 5px 25px;
-}
-.xiaomi-overlay h3 {
-  color: #1bbc9b;
-  border-left: #1bbc9b solid 5px;
-  padding-left: 10px;
-  height: 16px;
-  line-height: 16px;
-  overflow: hidden;
-  text-align: left;
 }
 .xiaomi-overlay .price {
   width: 150px;
@@ -974,14 +1010,6 @@ form .form-control input {
   height: 120px;
   overflow: hidden;
 }
-.xiaomi-overlay a.close {
-  width: 15px;
-  height: 15px;
-  background: url(../img/close-btn.png) no-repeat;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
 .uc-footer {
   background: none repeat scroll 0 0 #FFFFFF;
   border-top: 1px solid #E2E2E2;
@@ -993,27 +1021,6 @@ form .form-control input {
   left: 50%;
   margin-left: 233px;
   _margin-left: 250px;
-}
-.header .top-pub-btn span {
-  position: relative;
-}
-.header .top-pub-btn span .new {
-  display: inline-block;
-  height: 10px;
-  width: 30px;
-  text-align: center;
-  line-height: 10px;
-  color: #F00;
-  font-size: 14px;
-  font-family: Geneva, Verdana, sans-serif;
-  position: absolute;
-  right: -30px;
-  top: 2px;
-}
-.header .top-pub-btn span img {
-  position: absolute;
-  right: -26px;
-  top: 2px;
 }
 .search-box {
   background: #fff;
@@ -1027,7 +1034,7 @@ form .form-control input {
   padding: 0 15px;
   font-size: 16px;
 }
-.search-type li.first-item {
+.search-type li .first-item {
   border-left: none;
 }
 .search-type li a:hover {
