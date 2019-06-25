@@ -356,10 +356,10 @@
         },
         Reading: function () { //阅读模式;
             var $obj = $('.cont_steps'),
-                node = [$obj.siblings('.morebar.bg_f5').find('b'), $obj.find('.inbox'), $obj.siblings('.morebar.bg_f5'), $obj.find('.show_cont')],
+                node = [$obj.siblings('.more_bar.bg_f5').find('b'), $obj.find('.inbox'), $obj.siblings('.more_bar.bg_f5'), $obj.find('.show_cont')],
                 idx = 0, mov = [0, 0, 0], touch = [0, 0, 0, 0, 0, 0], atag = [0, 0, 0, 0], wid = $obj.width(),
                 lock = [0, 0, 0, 0],
-                h = W.innerHeight - $('header').height() - $('.morebar.bg_f5').height();
+                h = W.innerHeight - $('header').height() - $('.more_bar.bg_f5').height();
             node[1].children('.u_scroll').width($obj.children().width());
             node[1].height(h);
             node[3].height(h);
@@ -454,7 +454,7 @@
             });
         },
         isHeight: function (element) {
-            var id = $(element), highly = [df.pg[1], $('header').height(), $('.morebar.bg_f5').height()];
+            var id = $(element), highly = [df.pg[1], $('header').height(), $('.more_bar.bg_f5').height()];
             id.height(highly[0] - highly[1] - highly[2]);
             //2.3.3内部滑动重置
             var u = W.navigator.userAgent;
