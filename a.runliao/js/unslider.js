@@ -1,5 +1,7 @@
 (function(e, t) {
-    if (!e) return t;
+    if (!e) {
+        return t;
+    }
     var n = function() {
         this.el = t;
         this.items = t;

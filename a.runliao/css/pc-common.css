@@ -823,21 +823,6 @@ form .form-control input {
   margin: 0;
   visibility: hidden;
 }
-.side-nav-trigger {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  width: 45px;
-  height: 45px;
-  background: url(../img/global-icon-2.png?v=101402) no-repeat -104px 0;
-  visibility: hidden;
-}
-.side-nav-trigger:hover {
-  background-position: -154px 0;
-}
-.side-nav-trigger.on {
-  background-position: 0 0;
-}
 .side-nav:before,
 .side-nav:after {
   position: absolute;
@@ -861,20 +846,6 @@ form .form-control input {
   line-height: 28px;
   overflow: hidden;
 }
-.side-nav li.h3 {
-  text-indent: 1em;
-  display: none;
-}
-.side-nav li.h3 a {
-  font-size: 14px !important;
-}
-.side-nav li.h4 {
-  text-indent: 2em;
-  display: none;
-}
-.side-nav li.h4 a {
-  font-size: 12px !important;
-}
 .side-nav li a {
   color: #999;
 }
@@ -889,13 +860,48 @@ form .form-control input {
   background: #d1d1d1;
   overflow: hidden;
 }
-.side-nav li.on a {
+.side-nav li .h3 {
+  text-indent: 1em;
+  display: none;
+}
+.side-nav li .h3 a {
+  font-size: 14px !important;
+}
+.side-nav li .h4 {
+  text-indent: 2em;
+  display: none;
+}
+.side-nav li .h4 a {
+  font-size: 12px !important;
+}
+.side-nav li .on a {
   color: #009977;
   font-size: 16px;
 }
-.side-nav li.on i {
+.side-nav li .on i {
   background: #009977;
   border-color: #009977;
+}
+.side-nav-trigger {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: url(../img/global-icon-2.png?v=101402) no-repeat -104px 0;
+  visibility: hidden;
+}
+.side-nav-trigger:hover {
+  background-position: -154px 0;
+}
+.side-nav-trigger .on {
+  background-position: 0 0;
+}
+.side-nav-wrap {
+  position: fixed;
+  margin-left: 233px;
+  _margin-left: 250px;
+  left: 50%;
 }
 .to-top {
   position: absolute;
@@ -908,12 +914,6 @@ form .form-control input {
 }
 .to-top:hover {
   background-position: -74px -62px;
-}
-.side-nav-wrap {
-  position: fixed;
-  margin-left: 233px;
-  _margin-left: 250px;
-  left: 50%;
 }
 .xiaomi-btn {
   background: #FF0000;
@@ -1089,4 +1089,4 @@ form .form-control input {
   white-space: nowrap;
   overflow: hidden;
 }
-/*# sourceMappingURL=common.css.map */
+/*# sourceMappingURL=pc-common.css.map */

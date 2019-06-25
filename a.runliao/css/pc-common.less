@@ -807,33 +807,30 @@ form .form-control {
 .relate-article {
     background: #f1f1f1;
     margin-top: 30px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    h4 {
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        margin: 10px 0
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            float: left;
+            display: inline;
+            text-align: center;
+            margin: 0 10px;
+            img {
+                display: block;
+                margin-bottom: 3px
+            }
+        }
+    }
 }
 
-.relate-article h4 {
-    font-size: 14px;
-    font-weight: normal;
-    text-align: center;
-    margin: 10px 0
-}
-
-.relate-article ul {
-    list-style: none;
-    padding: 0;
-    margin: 0
-}
-
-.relate-article ul li {
-    float: left;
-    display: inline;
-    text-align: center;
-    margin: 0 10px
-}
-
-.relate-article ul li img {
-    display: block;
-    margin-bottom: 3px
-}
 
 .weixin {
     height: 224px;
@@ -843,21 +840,19 @@ form .form-control {
     _position: absolute;
     right: 5px;
     bottom: 50px;
-    z-index: 100
-}
-
-.weixin .p1 {
-    overflow: hidden
-}
-
-.weixin .p2 {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 0px;
-    top: 66px;
-    cursor: pointer;
-    z-index: 20
+    z-index: 100;
+    .p1 {
+        overflow: hidden
+    }
+    .p2 {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 0px;
+        top: 66px;
+        cursor: pointer;
+        z-index: 20
+    }
 }
 
 .side-nav {
@@ -869,8 +864,74 @@ form .form-control {
     padding: 10px 0 10px 20px;
     width: 250px;
     margin: 0;
-    visibility: hidden
+    visibility: hidden;
+    &:before, &:after {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border: #d1d1d1 solid 2px;
+        border-radius: 6px;
+        content: " ";
+        background: #fff;
+        left: -6px
+    }
+    &:before {
+        top: -6px
+    }
+
+    &:after {
+        bottom: -6px
+    }
+    li {
+        position: relative;
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        a {
+            color: #999;
+
+        }
+
+        i {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border: #fff solid 2px;
+            border-radius: 6px;
+            left: -26px;
+            top: 8px;
+            background: #d1d1d1;
+            overflow: hidden
+        }
+        .h3 {
+            text-indent: 1em;
+            display: none;
+            a {
+                font-size: 14px !important
+            }
+        }
+
+        .h4 {
+            text-indent: 2em;
+            display: none;
+            a {
+                font-size: 12px !important
+            }
+        }
+        .on {
+            a {
+                color: #009977;
+                font-size: 16px
+            }
+            i {
+                background: #009977;
+                border-color: #009977
+            }
+        }
+
+    }
 }
+
 
 .side-nav-trigger {
     position: absolute;
@@ -879,86 +940,23 @@ form .form-control {
     width: 45px;
     height: 45px;
     background: url(../img/global-icon-2.png?v=101402) no-repeat -104px 0;
-    visibility: hidden
+    visibility: hidden;
+    &:hover {
+        background-position: -154px 0
+    }
+    .on {
+        background-position: 0 0
+    }
 }
 
-.side-nav-trigger:hover {
-    background-position: -154px 0
+
+.side-nav-wrap {
+    position: fixed;
+    margin-left: 233px;
+    _margin-left: 250px;
+    left: 50%
 }
 
-.side-nav-trigger.on {
-    background-position: 0 0
-}
-
-.side-nav:before, .side-nav:after {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border: #d1d1d1 solid 2px;
-    border-radius: 6px;
-    content: " ";
-    background: #fff;
-    left: -6px
-}
-
-.side-nav:before {
-    top: -6px
-}
-
-.side-nav:after {
-    bottom: -6px
-}
-
-.side-nav li {
-    position: relative;
-    height: 28px;
-    line-height: 28px;
-    overflow: hidden
-}
-
-.side-nav li.h3 {
-    text-indent: 1em;
-    display: none
-}
-
-.side-nav li.h3 a {
-    font-size: 14px !important
-}
-
-.side-nav li.h4 {
-    text-indent: 2em;
-    display: none
-}
-
-.side-nav li.h4 a {
-    font-size: 12px !important
-}
-
-.side-nav li a {
-    color: #999
-}
-
-.side-nav li i {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border: #fff solid 2px;
-    border-radius: 6px;
-    left: -26px;
-    top: 8px;
-    background: #d1d1d1;
-    overflow: hidden
-}
-
-.side-nav li.on a {
-    color: #009977;
-    font-size: 16px
-}
-
-.side-nav li.on i {
-    background: #009977;
-    border-color: #009977
-}
 
 .to-top {
     position: absolute;
@@ -967,19 +965,12 @@ form .form-control {
     bottom: 0;
     left: 0;
     background: url(../img/global-icon-2.png?v=101402) no-repeat -1px -62px;
-    visibility: hidden
+    visibility: hidden;
+    &:hover {
+        background-position: -74px -62px
+    }
 }
 
-.to-top:hover {
-    background-position: -74px -62px
-}
-
-.side-nav-wrap {
-    position: fixed;
-    margin-left: 233px;
-    _margin-left: 250px;
-    left: 50%
-}
 
 .xiaomi-btn {
     background: #FF0000;
@@ -1094,10 +1085,6 @@ form .form-control {
     _margin-left: 250px;
 }
 
-
-
-
-
 .search-box {
     background: #fff;
     height: 82px;
@@ -1122,7 +1109,6 @@ form .form-control {
         }
     }
 }
-
 
 .search-input {
     margin-top: 15px;

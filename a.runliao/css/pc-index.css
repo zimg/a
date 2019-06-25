@@ -50,22 +50,22 @@
   margin: 0;
   width: 35px;
 }
-.cata ul li .s-1 h4 {
+.cata ul li.s-1 h4 {
   background-position: 0 -34px;
 }
-.cata ul li .s-2 h4 {
+.cata ul li.s-2 h4 {
   background-position: 0 -135px;
 }
-.cata ul li .s-3 h4 {
+.cata ul li.s-3 h4 {
   background-position: 0 -70px;
 }
-.cata ul li .s-4 h4 {
+.cata ul li.s-4 h4 {
   background-position: 0 0;
 }
-.cata ul li .s-5 h4 {
+.cata ul li.s-5 h4 {
   background-position: 0 -102px;
 }
-.cata ul li .s-6 h4 {
+.cata ul li.s-6 h4 {
   background-position: 0 -173px;
 }
 .cata ul li .sub-cata {
@@ -827,16 +827,16 @@
   background: url(../img/index-icon-4.png) no-repeat;
   margin-bottom: 5px;
 }
-.date .tabs-list li .i-1 i {
+.date .tabs-list li.i-1 i {
   background-position: 0 0;
 }
-.date .tabs-list li .i-2 i {
+.date .tabs-list li.i-2 i {
   background-position: 0 -71px;
 }
-.date .tabs-list li .i-3 i {
+.date .tabs-list li.i-3 i {
   background-position: 0 -144px;
 }
-.date .tabs-list li .i-4 i {
+.date .tabs-list li.i-4 i {
   background-position: 0 -214px;
 }
 .date .text-list {
@@ -910,28 +910,28 @@
   height: 64px;
   background: url(../img/index-icon-5.png) no-repeat;
 }
-.tools .tools-list a .t-1 i {
+.tools .tools-list a.t-1 i {
   background-position: 0 0;
 }
-.tools .tools-list a .t-2 i {
+.tools .tools-list a.t-2 i {
   background-position: 0 -71px;
 }
-.tools .tools-list a .t-3 i {
+.tools .tools-list a.t-3 i {
   background-position: 0 -143px;
 }
-.tools .tools-list a .t-4 i {
+.tools .tools-list a.t-4 i {
   background-position: 0 -214px;
 }
-.tools .tools-list a .t-5 i {
+.tools .tools-list a.t-5 i {
   background-position: 0 -286px;
 }
-.tools .tools-list a .t-6 i {
+.tools .tools-list a.t-6 i {
   background-position: 0 -357px;
 }
-.tools .tools-list a .t-7 i {
+.tools .tools-list a.t-7 i {
   background-position: 0 -429px;
 }
-.tools .tools-list a .t-8 i {
+.tools .tools-list a.t-8 i {
   background-position: 0 -500px;
 }
 .daren {
@@ -979,4 +979,4 @@
 .daren .daren-list li .labels {
   color: #999;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=pc-index.css.map */

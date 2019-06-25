@@ -82,18 +82,15 @@
 }
 
 .qa-today {
-
-}
-
-.qa-today .m-link-list {
-    width: 420px;
-    float: left;
-}
-
-.qa-today .link-list {
-    width: 280px;
-    float: left;
-    padding: 10px 0;
+    .m-link-list {
+        width: 420px;
+        float: left;
+    }
+    .link-list {
+        width: 280px;
+        float: left;
+        padding: 10px 0;
+    }
 }
 
 .m-link-list .m-link-list-item {
@@ -654,36 +651,34 @@
     /*padding: 15px 20px 0;*/
     background: #fff;
     border: #e9e9e9 solid 1px;
+    h2 {
+        font-size: 14px;
+        font-weight: normal;
+        height: 45px;
+        line-height: 45px;
+        padding: 0;
+        margin-bottom: 10px;
+        background: #fafafa;
+        span {
+            color: #009977;
+            border-left: #009977 solid 4px;
+            padding-left: 10px;
+            margin-left: 20px;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 20px;
+        li {
+            float: left;
+            width: 141px;
+            text-align: center;
+        }
+    }
 }
 
-.rel-label h2 {
-    font-size: 14px;
-    font-weight: normal;
-    height: 45px;
-    line-height: 45px;
-    padding: 0;
-    margin-bottom: 10px;
-    background: #fafafa;
-}
 
-.rel-label h2 span {
-    color: #009977;
-    border-left: #009977 solid 4px;
-    padding-left: 10px;
-    margin-left: 20px;
-}
-
-.rel-label ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 20px;
-}
-
-.rel-label ul li {
-    float: left;
-    width: 141px;
-    text-align: center;
-}
 
 .tip {
     max-width: 300px;
@@ -699,15 +694,15 @@
 
 .bread {
     position: relative;
+    a.fr {
+        display: inline-block;
+        float: right;
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+    }
 }
 
-.bread a.fr {
-    display: inline-block;
-    float: right;
-    position: absolute;
-    bottom: -10px;
-    right: 0;
-}
 
 .leha_01_floating {
     position: fixed;
@@ -722,19 +717,18 @@
 
 .qa-detail .q .author {
     position: relative;
-    margin-bottom: 20px
-}
-
-.qa-detail .q .author .TA {
-    display: inline-block;
-    position: absolute;
-    bottom: -15px;
-    right: 0;
-    width: 90px;
-    height: 22px;
-    background: #1bbc9b;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 22px;
-    color: #fff
+    margin-bottom: 20px;
+    .TA {
+        display: inline-block;
+        position: absolute;
+        bottom: -15px;
+        right: 0;
+        width: 90px;
+        height: 22px;
+        background: #1bbc9b;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 22px;
+        color: #fff
+    }
 }

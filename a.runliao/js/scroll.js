@@ -16,16 +16,16 @@
             line:12,  
             scrollNum:2,  
             scrollTime:5000
-        }
+        };
 		var options=jQuery.extend(defaults,options);
 		var _self = this;
 		return this.each(function(){  
 			$("li",this).each(function(){
 				$(this).css("display","none");
-			})
+			});
 			$("li:lt("+options.line+")",this).each(function(){
 				$(this).css("display","block");
-			})
+			});
 			function scroll() {
 				for(i=0;i<options.scrollNum;i++) {
 					var start=$("li:first",_self);
@@ -48,6 +48,6 @@
 			});
 			
 		});
-    }
+    };
     if($("#sItem").length>0){$("#sItem").scrollQ();}else{return;}
 })(jQuery);  
