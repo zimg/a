@@ -8,6 +8,7 @@
   margin-bottom: 10px;
 }
 .cata {
+  margin-top: 15px;
   height: 255px;
   padding: 0;
 }
@@ -544,89 +545,6 @@
 .bbs .links a:hover {
   color: #009977;
 }
-.bbs .question {
-  font-size: 12px;
-  width: 360px;
-  margin-left: 20px;
-  float: left;
-  margin-top: -42px;
-}
-.bbs .question li {
-  padding-bottom: 12px;
-  position: relative;
-  height: 28px;
-  line-height: 28px;
-}
-.bbs .question li b {
-  display: block;
-  float: right;
-  font-weight: normal;
-}
-.bbs .question li img {
-  float: left;
-  width: 28px;
-  height: 28px;
-  border-radius: 100px;
-  margin-right: 10px;
-}
-.bbs .question li em {
-  display: block;
-  float: right;
-  font-style: normal;
-  color: #999;
-  margin-right: 15px;
-}
-.bbs .question li p .q {
-  margin: 3px 0;
-}
-.bbs .question li:after {
-  position: absolute;
-  content: " ";
-  width: 1px;
-  height: 100%;
-  background: #e5e5e5;
-  top: 5px;
-  left: 3px;
-  z-index: 1;
-}
-.bbs .question li:before {
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  content: " ";
-  width: 7px;
-  height: 7px;
-  border-radius: 3px;
-  background: #ccc;
-  z-index: 2;
-}
-.bbs .question li .first:before {
-  background: #1bbc9b;
-}
-.bbs .question li .last:after {
-  display: none;
-}
-.bbs .question li .ilabel {
-  display: block;
-  float: left;
-  margin-right: 5px;
-  max-width: 55px;
-  white-space: nowrap;
-  overflow: hidden;
-  font-style: normal;
-}
-.bbs .question li .asking {
-  display: block;
-  float: left;
-  max-width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.bbs .question .show {
-  height: 400px;
-  overflow: hidden;
-}
 .bbs .weibo {
   float: left;
   width: 370px;
@@ -657,15 +575,15 @@
   top: 50%;
   margin-top: -1px;
 }
-.bbs .weibo ul li .head {
+.bbs .weibo ul li.head {
   padding-left: 0;
   line-height: 0;
   height: 150px;
 }
-.bbs .weibo ul li .head:before {
+.bbs .weibo ul li.head:before {
   display: none;
 }
-.bbs .weibo ul li .head span {
+.bbs .weibo ul li.head span {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -675,6 +593,65 @@
   height: 2em;
   line-height: 2;
   text-indent: 10px;
+}
+.question {
+  font-size: 12px;
+  width: 360px;
+  margin-left: 20px;
+  float: left;
+  margin-top: -42px;
+}
+.question li {
+  padding-bottom: 12px;
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+}
+.question li b {
+  display: block;
+  float: right;
+  font-weight: normal;
+}
+.question li img {
+  float: left;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.question li em {
+  display: block;
+  float: right;
+  font-style: normal;
+  color: #999;
+  margin-right: 15px;
+}
+.question li p .q {
+  margin: 3px 0;
+}
+.question li .first:before {
+  background: #1bbc9b;
+}
+.question li .last:after {
+  display: none;
+}
+.question li .ilabel {
+  display: block;
+  float: left;
+  margin-right: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-style: normal;
+}
+.question li .asking {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.question .show {
+  height: 400px;
+  overflow: hidden;
 }
 .orange,
 .orange:hover,
@@ -710,6 +687,12 @@
   margin: 0;
   font-size: 12px;
   font-weight: bold;
+}
+.views .view h4 a {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .views .view p {
   margin: 3px 0 0;
@@ -762,10 +745,10 @@
   margin-right: 10px;
   line-height: 0;
 }
-.views .view .hover {
+.views .hover {
   background: #F1F3E1;
 }
-.views .view .hover p .sns {
+.views .hover p .sns {
   visibility: visible;
 }
 .date h2 {
@@ -840,7 +823,7 @@
   background-position: 0 -214px;
 }
 .date .text-list {
-  background: #fff;
+  background: #f9faf2;
   border-radius: 3px;
   list-style: none;
   padding: 10px;

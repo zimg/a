@@ -5,9 +5,7 @@ df.ready(function () {
 /**
  * Created by laoya on 14/12/28.
  */
-//显示时间  crohn
-var curTime = new Date();
-$('.j-cur-date').html(curTime.toLocaleString().split(' ')[0]);
+
 
 //显示农历时间
 var CalendarData = new Array(100);
@@ -33,7 +31,7 @@ madd[9] = 273;
 madd[10] = 304;
 madd[11] = 334;
 
-function GetBit(m, n) {
+function get_bit(m, n) {
     return (m >> n) & 1;
 }
 
@@ -53,11 +51,11 @@ function e2c() {
     for (m = 0; ; m++) {
         k = (CalendarData[m] < 0xfff) ? 11 : 12;
         for (n = k; n >= 0; n--) {
-            if (total <= 29 + GetBit(CalendarData[m], n)) {
+            if (total <= 29 + get_bit(CalendarData[m], n)) {
                 isEnd = true;
                 break;
             }
-            total = total - 29 - GetBit(CalendarData[m], n);
+            total = total - 29 - get_bit(CalendarData[m], n);
         }
         if (isEnd) break;
     }
@@ -74,7 +72,7 @@ function e2c() {
     }
 }
 
-function GetcDateString() {
+function get_cdate_string() {
     var tmp = "";
     tmp += tgString.charAt((cYear - 4) % 10);
     tmp += dzString.charAt((cYear - 4) % 12);
@@ -95,14 +93,14 @@ function GetcDateString() {
     return tmp;
 }
 
-function GetLunarDay(solarYear, solarMonth, solarDay) {
+function get_lunar_day(solarYear, solarMonth, solarDay) {
     //solarYear = solarYear<1900?(1900+solarYear):solarYear;
     if (solarYear < 1921 || solarYear > 2020) {
         return "";
     } else {
         solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;
         e2c(solarYear, solarMonth, solarDay);
-        return GetcDateString();
+        return get_cdate_string();
     }
 }
 
@@ -116,8 +114,9 @@ if (yy < 100) {
     yy = "19" + yy;
 }
 
-function showCal() {
-    return GetLunarDay(yy, mm, dd);
-}
+function show_cal() { return get_lunar_day(yy, mm, dd);}
+$('.j-old-date').html(show_cal());
 
-$('.j-old-date').html(showCal());
+// 显示时间  crohn
+var curTime = new Date();
+$('.j-cur-date').html(curTime.toLocaleString().split(' ')[0]);

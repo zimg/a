@@ -11,19 +11,15 @@ h2 {
   background: #fff;
   padding: 0 20px;
 }
+.news-list .first-item {
+  border-top: none;
+}
 .news-list .news-item {
   position: relative;
   border-top: #e5e5e5 solid 1px;
   padding: 20px 0;
   font-size: 12px;
   color: #666;
-}
-.news-list .first-item {
-  border-top: none;
-}
-.news-list .news-item .object {
-  float: left;
-  margin-right: 15px;
 }
 .news-list .news-item h3 {
   margin: 0;
@@ -70,9 +66,14 @@ h2 {
 .news-list .news-item .like a:hover {
   background-position: -40px 0;
 }
+.news-list .news-item .object {
+  float: left;
+  margin-right: 15px;
+}
 /* override margin */
 .col-left {
   margin-top: 12px;
+  width: 790px;
 }
 .col-right {
   margin-top: 2px;
@@ -88,14 +89,17 @@ h2 {
 .qa h3 {
   margin: 0;
 }
-.qa .links {
-  margin-top: -23px;
-  text-align: right;
-}
 .qa ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.qa ul li:hover {
+  background: #f9f9f9;
+  padding: 5px;
+}
+.qa ul li:hover p.a {
+  display: block;
 }
 .qa ul li p {
   position: relative;
@@ -130,12 +134,9 @@ h2 {
   line-height: 17px;
   text-align: center;
 }
-.qa ul li:hover {
-  background: #f9f9f9;
-  padding: 5px;
-}
-.qa ul li:hover p.a {
-  display: block;
+.qa .links {
+  margin-top: -23px;
+  text-align: right;
 }
 .know {
   background: #fff;
@@ -400,6 +401,10 @@ h2 {
 }
 .know-2 ul li {
   line-height: 30px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .know-2 ul li a {
   color: #666;
@@ -429,9 +434,13 @@ h2 {
   padding: 0 20px 20px;
 }
 .article-2 .head h1 {
-  font-size: 28px;
+  float: left;
+  font-size: 26px;
+  font-weight: bold;
+  width: auto;
+  max-width: 510px;
 }
-.article-2 .head h1 span {
+.article-2 .head span {
   font-size: 12px;
   color: #999;
   margin-left: 20px;
@@ -446,7 +455,7 @@ h2 {
   vertical-align: middle;
   margin-right: 5px;
 }
-.article-2 .head .cite a b {
+.article-2 .head .cite .author a b {
   background: url(../img/global-icon-4.png) no-repeat;
   width: 16px;
   height: 16px;
@@ -455,7 +464,7 @@ h2 {
 }
 .article-2 .head .cite .like,
 .article-2 .head .cite .collect,
-.article-2 .head .cite .copy {
+.article-2 .head .cite .cite .copy {
   border-right: #E0E0E0 solid 1px;
   display: inline;
   padding: 0 10px;
@@ -1528,6 +1537,38 @@ h2 {
 .slide-scroll .slide-ul li:first-child {
   display: block;
 }
+.slide-scroll .btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 38%;
+}
+.slide-scroll .prev-btn {
+  background: url(../img/index-icon-6.png);
+  left: 10px;
+}
+.slide-scroll .next-btn {
+  background: url(../img/index-icon-6.png) -44px 0;
+  right: 5px;
+}
+.slide-scroll .box {
+  position: absolute;
+  width: 710px;
+  left: 0;
+  bottom: 80px;
+  padding: 0 20px;
+  overflow: hidden;
+  zoom: 1;
+}
+.slide-scroll .box a {
+  display: block;
+  font-size: 26px;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+}
 .slide-title {
   position: absolute;
   left: 0;
@@ -1548,39 +1589,6 @@ h2 {
 .slide-title li p {
   font-size: 12px;
   padding: 0 20px;
-}
-.slide-scroll .btn {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  top: 38%;
-}
-.slide-scroll .prev-btn {
-  background: url(../img/index-icon-6.png);
-  left: 10px;
-}
-.slide-scroll .next-btn {
-  background: url(../img/index-icon-6.png) -44px 0;
-  right: 5px;
-}
-/**2015-8-25**/
-.slide-scroll .box {
-  position: absolute;
-  width: 710px;
-  left: 0;
-  bottom: 80px;
-  padding: 0 20px;
-  overflow: hidden;
-  zoom: 1;
-}
-.slide-scroll .box a {
-  display: block;
-  font-size: 26px;
-  height: 30px;
-  line-height: 30px;
-  width: 100%;
-  overflow: hidden;
-  color: #fff;
 }
 /**list**/
 .news-index-list li {

@@ -14,6 +14,7 @@
 }
 
 .cata {
+    margin-top: 15px;
     height: 255px;
     padding: 0;
     h3 {
@@ -566,92 +567,7 @@
             }
         }
     }
-    .question {
-        font-size: 12px;
-        width: 360px;
-        margin-left: 20px;
-        float: left;
-        margin-top: -42px;
-        li {
-            padding-bottom: 12px;
-            position: relative;;
-            height: 28px;
-            line-height: 28px;
-            b {
-                display: block;
-                float: right;
-                font-weight: normal
-            }
-            img {
-                float: left;
-                width: 28px;
-                height: 28px;
-                border-radius: 100px;
-                margin-right: 10px
-            }
-            em {
-                display: block;
-                float: right;
-                font-style: normal;
-                color: #999;
-                margin-right: 15px
-            }
-            p{
-                .q {
-                    margin: 3px 0;
-                }
-            }
-            &:after{
-                position: absolute;
-                content: " ";
-                width: 1px;
-                height: 100%;
-                background: #e5e5e5;
-                top: 5px;
-                left: 3px;
-                z-index: 1;
-            }
-            &:before{
-                position: absolute;
-                top: 5px;
-                left: 0px;
-                content: " ";
-                width: 7px;
-                height: 7px;
-                border-radius: 3px;
-                background: #ccc;
-                z-index: 2;
-            }
 
-            .first:before{
-                background: #1bbc9b;
-            }
-            .last:after{
-                display: none;
-            }
-            .ilabel {
-                display: block;
-                float: left;
-                margin-right: 5px;
-                max-width: 55px;
-                white-space: nowrap;
-                overflow: hidden;
-                font-style: normal
-            }
-            .asking {
-                display: block;
-                float: left;
-                max-width: 150px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        .show {
-            height: 400px;
-            overflow: hidden
-        }
-    }
     .weibo {
         float: left;
         width: 370px;
@@ -679,7 +595,7 @@
                     top: 50%;
                     margin-top: -1px;
                 }
-                .head {
+                &.head {
                     padding-left: 0;
                     line-height: 0;
                     height: 150px;
@@ -701,6 +617,71 @@
             }
 
         }
+    }
+}
+
+.question {
+    font-size: 12px;
+    width: 360px;
+    margin-left: 20px;
+    float: left;
+    margin-top: -42px;
+    li {
+        padding-bottom: 12px;
+        position: relative;;
+        height: 28px;
+        line-height: 28px;
+        b {
+            display: block;
+            float: right;
+            font-weight: normal
+        }
+        img {
+            float: left;
+            width: 28px;
+            height: 28px;
+            border-radius: 100px;
+            margin-right: 10px
+        }
+        em {
+            display: block;
+            float: right;
+            font-style: normal;
+            color: #999;
+            margin-right: 15px
+        }
+        p{
+            .q {
+                margin: 3px 0;
+            }
+        }
+        .first:before{
+            background: #1bbc9b;
+        }
+        .last:after{
+            display: none;
+        }
+        .ilabel {
+            display: block;
+            float: left;
+            margin-right: 3px;
+            //max-width: 55px;
+            white-space: nowrap;
+            overflow: hidden;
+            font-style: normal
+        }
+        .asking {
+           // float: left;
+           // max-width: 150px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .show {
+        height: 400px;
+        overflow: hidden
     }
 }
 
@@ -739,6 +720,12 @@
             margin: 0;
             font-size: 12px;
             font-weight: bold;
+            a{
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
         }
         p {
             margin: 3px 0 0;
@@ -791,11 +778,11 @@
             margin-right: 10px;
             line-height: 0;
         }
-        .hover {
-            background: #F1F3E1;
-            p .sns {
-                visibility: visible;
-            }
+    }
+    .hover {
+        background: #F1F3E1;
+        p .sns {
+            visibility: visible;
         }
     }
 }
@@ -874,7 +861,7 @@
         }
     }
     .text-list {
-        background: #fff;
+        background: #f9faf2;
         border-radius: 3px;
         list-style: none;
         padding: 10px;

@@ -5,8 +5,9 @@
 
 $(function(){
   // 初始化版权内容
+
   var copyRightStr = '<br><br>';
-  copyRightStr += '作者:'+author;
+  copyRightStr += '作者:'+$sc['author'];
   copyRightStr += ('<br>来源链接:' + window.location.href + '<br>');
   copyRightStr += '来源:润疗养生网<br>';
   copyRightStr += '著作权归作者所有。';
