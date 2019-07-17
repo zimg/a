@@ -207,7 +207,7 @@ $(function(){
                 //curTargetIndex = Math.floor((i-1)/4)+1;
                 //curTargetTop = curTargetIndex != curPageIndex?0:parseInt($(this).offset().top);
                 curTargetTop = parseInt($(this).offset().top);
-                navTree.append('<li data-index="' + i + '" class="' + this.nodeName.toLowerCase() + '"><a href="' + location.pathname + '#' + i + '" data-top="' + curTargetTop + '">' + $(this).text() + '</a><i></i></li>');
+                navTree.append('<li data-index="' + i + '" class="' + this.nodeName.toLowerCase() + '"><a href="#' + i + '" data-top="' + curTargetTop + '">' + $(this).text() + '</a><i></i></li>');
             });
             navTree.appendTo(wigetWrapEl);
             navTreeTriggerEl.appendTo(wigetWrapEl);
