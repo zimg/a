@@ -657,7 +657,8 @@ transition: all .5s; border-color: #f3f3f3;position: relative;overflow: hidden;}
 .wm-list dt{margin-bottom: 24px;}
 .wm-list dd a{font-size: 14px;color: #999;line-height: 32px;}
 .wm-list a:hover{color: #005baa;}
-/*商城*/.cont{width:1200px;height:auto;margin:0 auto;}
+/*商城*/
+.cont{width:1200px;height:auto;margin:0 auto;}
 .shop_banner{width:100%;height:680px;min-width:1200px;margin:0 auto;overflow:hidden;background:url(../images/banner.jpg) no-repeat;background-position:center;}
 .shop_user{width:100%;height:auto;margin-top:80px;}
 .shop_title{width:100%;height:auto;text-align:center;}
